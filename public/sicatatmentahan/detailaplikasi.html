@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- DataTables -->
+    <link href="../../plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="../../plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+    <!-- Sweet Alert -->
+    <link href="../../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    <link href="../../plugins/animate/animate.css" rel="stylesheet" type="text/css">
+    <!-- App css -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-image">
+                <img src="./logo.png" alt="">
+            </div>
+            <div class="logo-name">
+                Admin
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <ul class="navLinks">
+                <li class="navList ">
+                    <a href="index.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <span class="links">Dashboard</span>
+                    </a>
+                </li>
+                <li class="navList active">
+                    <a href="aplikasi.html">
+                        <ion-icon name="folder-outline"></ion-icon>
+                        <span class="links">Daftar Aplikasi</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="report.html">
+                        <ion-icon name="analytics-outline"></ion-icon>
+                        <span class="links">Report</span>
+                    </a>
+                </li>
+                <li class="navList">
+                    <a href="setting.html">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                        <span class="links">Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="bottom-link">
+                <li>
+                    <a href="#">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span class="links">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                   <a href="#">
+                        
+                    </a>
+                </li> 
+                
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <ion-icon class="navToggle" name="menu-outline"></ion-icon>
+            <p class="toplogo-text">Si Catat Aplikasi</p>
+            <img src="./logo.png" alt="">
+        </div>
+        <div id="tabs" class="container">
+            <div class="title">
+            </div>
+            <div class="activity">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#detailaplikasi" role="tab">Detail Aplikasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#deskripsisistem" role="tab">Deskripsi Sistem</a>
+                        </li>                                                
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#domaininfrastuktur" role="tab">Domain Infrastuktur</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#domainlayanan" role="tab">Domain Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#domainprosesbisnis" role="tab">Domain 
+                                Proses 
+                                Bisnis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#sumberdayamanusia" role="tab">Sumber 
+                                Daya
+                                Manusia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#domainkeamanan" role="tab">Domain 
+                                Keamanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#domaindatadaninformasi" role="tab">Domain 
+                                Data dan 
+                                Informasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#beritaacara" role="tab">Berita
+                                Acara</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#uploadfile" role="tab">Upload
+                                File</a>
+                        </li>
+                        
+                    </ul>
+                <div class="activity-data2">
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active p-3" id="detailaplikasi" role="tabpanel">
+                                <h class="hdetailaplikasi">DETAIL APLIKASI</h>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Nomor Asset</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Nomor Asset">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Hostname</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Hostname">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">IP Address</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="IP Address">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Nama Internal</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Nama Internal">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Status</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Status">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Keterangan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Keterangan">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tanggal Launching</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Tanggal Launching">
+                                    </div>
+                                </div>
+                                <div class="detailaplikasitambah"> 
+                                <button  class="tambah-data">Tambah Data</button> 
+                                 </div>
+                            </div>
+                            <div class="tab-pane p-3" id="deskripsisistem" role="tabpanel">
+                                <h class="hdetailaplikasi">DESKRIPSI SISTEM</h>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Nama Eksternal</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Nama Eksternal">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Lokasi</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Lokasi">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">OPD</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="OPD">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Sertifikat Kelayakan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Sertifikat Kelayakan">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Keterangan Sertifikat</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Keterangan Sertifikat">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Profile Penyelenggara</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Profile Penyelenggara">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Fungsi Aplikasi</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Fungsi Aplikasi">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Deskripsi</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Deskripsi">
+                                    </div>
+                                </div> 
+                                <div class="detailaplikasitambah"> 
+                                    <button  class="tambah-data">Tambah Data</button> 
+                                     </div>
+                            </div>                                                
+                            <div class="tab-pane p-3" id="domaininfrastuktur" role="tabpanel">
+                                <h class="hdetailaplikasi">DOMAIN INFRASTRUKTUR</h>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Perangkat Utama</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Perangkat Utama">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Informasi Data Center</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Informasi Data Center">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Perangkat Khusus</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Perangkat Khusus">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Basis Aplikasi</p>
+                                    <div class="col-sm-10">
+                                        <select class="select2 form-control mb-3 custom-select">
+                                            <option disabled selected> - </option>
+                                            <option>WEB</option>
+                                            <option>IOS</option>
+                                            <option>ANDROID</option>
+                                        </select>
+                                    </div>
+                                </div>  <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Perangkat Keras Server</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Perangkat Keras Server">
+                                    </div>
+                                </div>
+                                <div class="detailaplikasitambah"> 
+                                    <button  class="tambah-data">Tambah Data</button> 
+                                     </div>
+                            </div>
+
+                                <div class="tab-pane p-3" id="domainlayanan" role="tabpanel">
+                                <h class="hdetailaplikasi">DOMAIN LAYANAN</h>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Kategori Jenis Aplikasi</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Nama Eksternal">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Dasar Hukum</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Dasar Hukum">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Kategori Akses</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Kategori Akses">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Ketersediaan Dipublikasi</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Ketersediaan Dipublikasi">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">URL</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="URL">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Unit Pengembangan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Unit Pengembangan">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Unit Operasional</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Unit Operasional">
+                                    </div>
+                                </div>
+                                <div class="detailaplikasitambah"> 
+                                    <button  class="tambah-data">Tambah Data</button> 
+                                     </div>
+                                </div>     
+                                
+                                <div class="tab-pane p-3" id="domainprosesbisnis" role="tabpanel">
+                                <h class="hdetailaplikasi">DOMAIN PROSES BISNIS</h>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Frekuensi pemeliharaan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Frekuensi pemeliharaan">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Evaluasi Layanan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Evaluasi Layanan">
+                                    </div>
+                                </div> 
+                                <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Frekuensi Gangguan</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Frekuensi Gangguan">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Adanya Dokumen</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Adanya Dokumen">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Proses Bisnis</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Proses Bisnis">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Peta Rencana</p>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" type="email" value="" id="example-email-input" placeholder="Peta Rencana">
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tingkat Kematangan Proses</p>
+                                    <div class="col-sm-10">
+                                        <select class="select2 form-control mb-3 custom-select">
+                                            <option disabled selected> - </option>
+                                            <option>Rintisan</option>
+                                            <option>Terkelola</option>
+                                            <option>Terstandarisasi</option>
+                                            <option>Terintregasi & Terstruktur</option>
+                                            <option>Optimum</option>
+                                        </select>
+                                    </div>
+                                </div> <div class="form-group row">
+                                    <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tingkat Kematangan Fungsi</p>
+                                    <div class="col-sm-10">
+                                        <select class="select2 form-control mb-3 custom-select">
+                                            <option disabled selected> - </option>
+                                            <option>Informasi</option>
+                                            <option>Kolaborasi</option>
+                                            <option>Optimalisasi</option>
+                                            <option>Transaksi</option>
+                                            <option>Interaksi</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="detailaplikasitambah"> 
+                                    <button  class="tambah-data">Tambah Data</button> 
+                                     </div>
+                                </div>
+                            
+                                <div class="tab-pane p-3" id="sumberdayamanusia" role="tabpanel">
+                                    <h class="hdetailaplikasi">SUMBER DAYA MANUSIA</h>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Penanggung Jawab Teknis</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Penanggung Jawab Teknis">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Penanggung Jawab</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Penanggung Jawab">
+                                        </div>
+                                    </div> 
+                                     <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tenaga Teknis</p>
+                                        <div class="col-sm-10">
+                                            <select class="select2 form-control mb-3 custom-select">
+                                                <option disabled selected> - </option>
+                                                <option>Tenaga Teknis Internal</option>
+                                                <option>Tenaga Teknis Penyedia</option>
+                                            </select>
+                                        </div>
+                                    </div>  <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tenaga Pendukung Teknis</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Tenaga Pendukung Teknis">
+                                        </div>
+                                    </div>
+                                    <div class="detailaplikasitambah"> 
+                                        <button  class="tambah-data">Tambah Data</button> 
+                                         </div>
+                                </div>    
+
+                                <div class="tab-pane p-3" id="domainkeamanan" role="tabpanel">
+                                    <h class="hdetailaplikasi">DOMAIN KEAMANAN</h>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Standar Teknis dan Prosedur Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Standar Teknis dan Prosedur Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Audit Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Audit Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Peningkatan Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Peningkatan Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Penanganan Insiden Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Penanganan Insiden Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Edukasi Kesadaran Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Edukasi Kesadaran Keamanan SPBE">
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Kelaikan Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Kelaikan Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Identifikasi Kerentanan Keamanan SPBE</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Identifikasi Kerentanan Keamanan SPBE">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Sistem Pengamanan</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Sistem Pengamanan">
+                                        </div>
+                                    </div>
+                                    <div class="detailaplikasitambah"> 
+                                        <button  class="tambah-data">Tambah Data</button> 
+                                         </div>
+                                </div>  
+                                
+                                <div class="tab-pane p-3" id="domaindatadaninformasi" role="tabpanel">
+                                    <h class="hdetailaplikasi">DOMAIN DATA & INFORMASI</h>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Supplier Data</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Supplier Data">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Customer Data</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Customer Data">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Inputan Data</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Inputan Data">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Data Yang Digunakan</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Data Yang Digunakan">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Luaran Data</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Luaran Data">
+                                        </div>
+                                    </div> 
+                                    <div class="detailaplikasitambah"> 
+                                        <button  class="tambah-data">Tambah Data</button> 
+                                         </div>
+                                </div>
+
+                                <div class="tab-pane p-3" id="beritaacara" role="tabpanel">
+                                    <h class="hdetailaplikasi">BERITA ACARA</h>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Integrasi Data</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Integrasi Data">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tanggal Rapat</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Tanggal Rapat">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Tempat Rapat</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Tempat Rapat">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Maintenance Aplikasi</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Maintenance Aplikasi">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Pengembangan Aplikasi</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Pengembangan Aplikasi">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Pemeliharaan Server</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Pemeliharaan Server">
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Keamanan (Pemasangan SSL)</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Keamanan (Pemasangan SSL)">
+                                        </div>
+                                    </div> 
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Backup  Data Aplikasi</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Backup  Data Aplikasi">
+                                        </div>
+                                    </div>   
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Restore Aplikasi</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Restore Aplikasi">
+                                        </div>
+                                       </div> 
+                                    <div class="detailaplikasitambah"> 
+                                        <button  class="tambah-data">Tambah Data</button> 
+                                         </div>
+                                </div>
+
+                                <div class="tab-pane p-3" id="uploadfile" role="tabpanel">
+                                    <h class="hdetailaplikasi">UPLOAD FILE</h>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">No Versi</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Integrasi Data">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-email-input" class="col-sm-2 col-form-label text-right">Deskripsi Pembaruan</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="email" value="" id="example-email-input" placeholder="Tanggal Rapat">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-date-input" class="col-sm-2 col-form-label text-right">Date</p>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <p for="example-date-input" class="col-sm-2 col-form-label text-right">Upload File</p>
+                                        <div class="col-sm-10">
+                                            <button  class="tambah-data">Upload File</button> 
+                                            <p>Dokumen Perancangan</p>
+                                            <button  class="tambah-data">Upload File</button> 
+                                            <p>Source Code</p>
+                                        </div>
+                                    </div>
+                                    <div class="detailaplikasitambah"> 
+                                        <button  class="tambah-data">Tambah Data</button> 
+                                     </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>                                                                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./index.js"></script>
+
+     <!-- jQuery  -->
+     <script src="../assets/js/jquery.min.js"></script>
+     <script src="../assets/js/jquery-ui.min.js"></script>
+     <script src="../assets/js/bootstrap.bundle.min.js"></script>
+     <script src="../assets/js/metismenu.min.js"></script>
+     <script src="../assets/js/waves.js"></script>
+     <script src="../assets/js/feather.min.js"></script>
+     <script src="../assets/js/jquery.slimscroll.min.js"></script>    
+     
+     <!-- Required datatable js -->
+     <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+     <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
+     <!-- Buttons examples -->
+     <script src="../../plugins/datatables/dataTables.buttons.min.js"></script>
+     <script src="../../plugins/datatables/buttons.bootstrap4.min.js"></script>
+     <script src="../../plugins/datatables/jszip.min.js"></script>
+     <script src="../../plugins/datatables/pdfmake.min.js"></script>
+     <script src="../../plugins/datatables/vfs_fonts.js"></script>
+     <script src="../../plugins/datatables/buttons.html5.min.js"></script>
+     <script src="../../plugins/datatables/buttons.print.min.js"></script>
+     <script src="../../plugins/datatables/buttons.colVis.min.js"></script>
+     <!-- Responsive examples -->
+     <script src="../../plugins/datatables/dataTables.responsive.min.js"></script>
+     <script src="../../plugins/datatables/responsive.bootstrap4.min.js"></script>
+     <script src="../assets/pages/jquery.datatable.init.js"></script>
+
+
+    <!-- Sweet-Alert  -->
+    <script src="../../plugins/sweet-alert2/sweetalert2.min.js"></script>
+    <script src="../assets/pages/jquery.sweet-alert.init.js"></script>
+  
+
+     <!-- App js -->
+     <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
