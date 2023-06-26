@@ -10,7 +10,7 @@
         <div class="menu-items">
             <ul class="navLinks ">
                 <li class="navList active ">
-                    <a href="/dashboard">
+                    <a href="/">
                         <ion-icon name="home-outline"></ion-icon>
                         <span class="links">Dashboard</span>
                     </a>
@@ -36,9 +36,15 @@
             </ul>
             <ul class="bottom-link">
                 <li>
-                    <a href="#">
+                    <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> 
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+
                         <ion-icon name="log-out-outline"></ion-icon>
-                        <span class="links">Logout</span>
+                        <span id="logout-form" action="{{ route('logout') }}" method="POST" class="links">Logout @csrf </span>
                     </a>
                 </li>
                 <li class="mode">

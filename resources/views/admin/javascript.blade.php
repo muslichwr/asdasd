@@ -4,7 +4,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="{{ asset('/sicatatmentahan/chart.js') }}"></script>
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.0/datatables.min.js"></script>
+
+
+
      <!-- jQuery  -->
      <script src="{{ asset('/sicatatmentahan/assets/js/jquery.min.js') }}"></script>
      <script src="{{ asset('/sicatatmentahan/assets/js/jquery-ui.min.js') }}"></script>

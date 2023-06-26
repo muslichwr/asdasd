@@ -52,45 +52,6 @@ const fetchedData = fetch("./data.json")
                     })
 
 
-const fetchedData1 = fetch("./data.json")
-                    .then((data)=>{
-                        return data.json()
-                    })
-                    .then(response=>{
-                        console.log(response);
-                        const items = response.item
-                        let Name = "" 
-                        let Email = ""
-                        let Joined = ""
-                        
-                        items.forEach((element)=>{
-                            Name += `<th>${element.name}</th>`
-                            Email += `<span class="data-list">${element.email}</span>`
-                            Joined += `<span class="data-list">${element.joined}</span>`
-                        })
-                        names1.innerHTML += Name
-                        email1.innerHTML += Email
-                        joined1.innerHTML += Joined
-                    })
-
-                    inputFields.forEach((e, i) => {
-                        let val = parseInt(e.textContent);
-                        console.log(val);
-                        let circle = document.getElementById(`circle${i + 1}`);
-                        let r = circle.getAttribute('r');
-                        let circ = Math.PI * 2 * r;
-                        let counter = 0;
-                        let fillValue = (circ * (100 - val)) / 100;
-                        setInterval(() => {
-                            if (counter === val) {
-                                clearInterval();
-                            } else {
-                                counter += 1;
-                                e.innerText = counter + '%';
-                                circle.style.strokeDashoffset = fillValue;
-                            }
-                        }, 1000 / val);
-                    });
 
 const toggle = document.querySelector(".toggle"),
               input = document.querySelector("input");

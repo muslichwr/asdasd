@@ -2,6 +2,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('/sicatatmentahan/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.0/datatables.min.css"/>
+ 
     <title>Admin Dashboard</title>
 
     <!-- App favicon -->
@@ -21,3 +24,4 @@
     <link href="{{ asset('/sicatatmentahan/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/sicatatmentahan/assets/css/metisMenu.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/sicatatmentahan/assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+    

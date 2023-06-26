@@ -2,8 +2,13 @@
 <html lang="en">
 
 <head>
+
     @include('admin/header')
     @livewireStyles
+
+
+</head>
+
 <body>
     <nav>
         @include('admin/navbar')
@@ -23,9 +28,11 @@
             @yield('content')
         </div>
     </section>
-    @include('admin/javascript')
+    
     @stack('scripts')
+    @include('admin/javascript')
     @livewireScripts
+     
 </body>
 
 </html>
