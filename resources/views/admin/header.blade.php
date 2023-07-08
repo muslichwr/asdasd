@@ -8,7 +8,7 @@
     <title>Admin Dashboard</title>
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset('/sicatatmentahan/assets/images/favicon.ico') }}">
+    <!-- <link rel="shortcut icon" href="{{ asset('/sicatatmentahan/assets/images/favicon.ico') }}"> -->
 
     <!-- DataTables -->
     <link href="{{ asset('/sicatatmentahan/plugins/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />

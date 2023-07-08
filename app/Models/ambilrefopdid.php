@@ -12,9 +12,5 @@ class ambilrefopdid extends Model
 
     protected $table = 'ref_opd';
 
-    public function aplikasis()
-    {
-        return $this->hasMany(ModelsDetailaplikasi::class, 'ref_opd_id');
-    }
+    public $timestamps = false;
 }
-

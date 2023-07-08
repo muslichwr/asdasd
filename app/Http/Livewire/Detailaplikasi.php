@@ -11,13 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 class Detailaplikasi extends Component
 {
-    use WithPagination;
-
     public function render()
     {
-        $opds = Modelsambilrefopdid::with('aplikasis')->get();
-        return view('livewire.detailaplikasi', compact('opds'));
-    }
+        $refOpds = Modelsambilrefopdid::all(); // Replace with your RefOpds model
+        $aplikasis = ModelsDetailaplikasi::all(); // Replace with your RefOpds model
 
-   
+
+        return view('livewire.detailaplikasi', compact('refOpds', 'aplikasis'));
+    }
 }

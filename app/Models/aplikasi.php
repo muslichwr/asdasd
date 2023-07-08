@@ -7,5 +7,43 @@ use Illuminate\Database\Eloquent\Model;
 
 class aplikasi extends Model
 {
-    use HasFactory;
+    public $timestamps = false;
+    protected $table = 'aplikasi';
+    protected $fillable = [
+        'id',
+        'no_asset',
+        'ipaddress',
+        'hostname',
+        'nm_internal',
+        'ref_status_id',
+        'tgl_launching',
+        'nm_eksternal',
+        'ref_lokasi_id',
+        'ref_opd_id',
+        'sertf_kelayakan_id',
+        'ket_sertf',
+        'fung_apk',
+        'deskripsi',
+        'prkt_utama',
+        'info_data_center',
+        'prkt_khusus',
+        'ref_basisaplikasi_id',
+        'os',
+        'web_server',
+        'basis_data',
+        'bhs_pemrograman',
+        'framework',
+        'sistem_penghubung_layanan',
+        'kerngka_pengembangan',
+        'tipe_lisensi',
+        'komputasi_awan',
+        'ref_sasaran_id',
+        'ref_sasaran_jenisaplikasi_id',
+        'ref_dasarhukum_id',
+        'ref_kategoriakses_id',
+        'layanan_publik',
+        'unit_pengembangan',
+        'unit_operasional',
+    ];
+    
 }

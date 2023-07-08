@@ -24,8 +24,8 @@
         </div>
     </section>
     @include('admin/javascript')
-    @stack('scripts')
     @livewireScripts
+    @stack('scripts')
 </body>
 
 </html>

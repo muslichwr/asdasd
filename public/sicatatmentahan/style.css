@@ -95,13 +95,6 @@ nav.close:not(:disabled):not(.disabled):hover{
     opacity:unset;
 }
 
-.child-row {
-display: none;
-background-color: #f9f9f9;
-}
-.child-row.show {
-display: table-row;
-}
 
 .activity .nav {
     padding-left: 0;
@@ -113,7 +106,7 @@ display: table-row;
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 50px;
+    height: 62.5px;
 }
 
 .tab-pane .col-sm-10  .mb-3{
@@ -132,6 +125,8 @@ nav .logo-image {
     height: 85px;
     border-radius: 50%;
 }
+
+
 
 nav .logo-image img {
     margin-left: 84px;
@@ -730,6 +725,13 @@ input[type="checkbox"] {
     margin-left: 150px;
 
 }
+
+.child-row ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 .activity .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color:var(--color-silver);
