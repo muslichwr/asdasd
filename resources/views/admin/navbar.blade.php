@@ -3,7 +3,9 @@
                 <img src="{{ asset('/sicatatmentahan/logo.png') }}" alt="">
             </div>
             <div class="logo-name">
-                Admin
+            @auth
+            {{ auth()->user()->username }}
+                @endauth
             </div>
         </div>
 

@@ -7,7 +7,7 @@
                         <form>
                             <div class="form-group">
                                 <h for="exampleFormControlInput1">Username</h>
-                                <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+                                <input type="username" class="form-control" id="exampleFormControlInput1" placeholder="{{ auth()->user()->username }}" readonly>
                             </div>
                             <div class="form-group">
                                 <h for="userpassword">Password Baru</h>                                            
