@@ -9,25 +9,25 @@
 
         <div class="menu-items">
             <ul class="navLinks ">
-                <li class="navList active ">
+                <li class="navList {{ request()->is('/') ? 'active' : '' }}">
                     <a href="/">
                         <ion-icon name="home-outline"></ion-icon>
                         <span class="links">Dashboard</span>
                     </a>
                 </li>
-                <li class="navList">
+                <li class="navList {{ request()->is('detailaplikasi') ? 'active' : '' }}">
                     <a href="/detailaplikasi">
                         <ion-icon name="folder-outline"></ion-icon>
                         <span class="links">Daftar Aplikasi</span>
                     </a>
                 </li>
-                <li class="navList">
+                <li class="navList {{ request()->is('reportaplikasi') ? 'active' : '' }}">
                     <a href="/reportaplikasi">
                         <ion-icon name="analytics-outline"></ion-icon>
                         <span class="links">Report</span>
                     </a>
                 </li>
-                <li class="navList ">
+                <li class="navList {{ request()->is('settingsicatat') ? 'active' : '' }} ">
                     <a href="/settingsicatat">
                         <ion-icon name="chatbubbles-outline"></ion-icon>
                         <span class="links">Settings</span>
