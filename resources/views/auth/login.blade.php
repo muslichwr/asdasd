@@ -47,7 +47,7 @@
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
 			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-									  <input type="checkbox" checked>
+									  <input type="checkbox" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 									  <span class="checkmark"></span>
 										</label>
 						</div>

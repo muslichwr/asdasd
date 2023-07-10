@@ -4,6 +4,7 @@ use App\Http\Controllers\AplikasiEditController;
 use App\Http\Controllers\data\EditAplikasiController;
 use App\Http\Controllers\data\DetailAplikasiController;
 use App\Http\Controllers\data\DetailEditAplikasiController;
+use App\Http\Controllers\DetailReportController;
 use App\Http\Controllers\DokumenTatakelolaController;
 use App\Http\Controllers\ReportController;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +41,7 @@ Route::get('/settingsicatat', function(){
 /*Route::get('editaplikasi/{id}', EditDetailAplikasi::class)->name('editAplikasi'); */
 Route::get('/detailaplikasi/{aplikasi}/edit', [AplikasiEditController::class, 'edit'])->name('data.detailaplikasi.edit')->middleware('auth');
 Route::get('/reportaplikasi', [ReportController::class, 'report'])->name('data.detailaplikasi.report')->middleware('auth');
+Route::get('/detailsreport/{aplikasi}', [DetailReportController::class, 'DReport'])->name('data.detailaplikasi.detailsreport')->middleware('auth');
 
 
 
